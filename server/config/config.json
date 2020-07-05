@@ -1,9 +1,0 @@
-{
-    "development": {
-        "username" : "admin",
-        "password" : "imhungry",
-        "database" : "dessert",
-        "host" :  "dessertdb.cnbhvz2bmwob.ap-northeast-2.rds.amazonaws.com",
-        "dialect" : "mysql"
-    }
-}
