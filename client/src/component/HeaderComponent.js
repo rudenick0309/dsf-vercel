@@ -102,3 +102,4 @@ class HeaderComponent extends React.Component {
 // ReactDOM.render(</*페이지*/ isLoggedIn={true}>, document.getElementById("root"));
 
 export default HeaderComponent;
+// 수정본 기기
