@@ -1,0 +1,24 @@
+{ 
+    "Userinfo" = [ 
+    { 
+        "username" : "전수빈", 
+        "password" : "12345", 
+        "email" : "aaa@gmail.com", 
+        "mobile" : "01012345678"
+    }, 
+
+    { 
+        "username" : "황선주", 
+        "password" : "12345", 
+        "email" : "bbb@gmail.com", 
+        "mobile" : "01011111111"
+    }, 
+
+    { 
+        "username" : "고윤혁", 
+        "password" : "12345", 
+        "email" : "ccc@gmail.com", 
+        "mobile" : "01022222222"
+    }
+  ] 
+}
