@@ -16,7 +16,7 @@ const userRouter = require('./routes/user')
 const dessertRouter = require('./routes/dessert')
 
 const app = express()
-const port = 4000;
+// const port = 4000;
 
 //express와 mysql 연결()
 sequelize.sync()
@@ -37,5 +37,6 @@ app.get('/', (req,res) => {
 })
 
 app.use('/user', userRouter)
+app.use('/dessert', dessertRouter)
 
 app.listen(4000)
