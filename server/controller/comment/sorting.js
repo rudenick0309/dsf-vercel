@@ -5,8 +5,8 @@ module.exports = {
     post: (async(req, res) => {
             let sorted = await comments.findAll(
                 { where:
-                    { culture: req.body.culture },
-                attributes: ['user_name','comment']
+                    { culture: req.body.culture }, 
+                attributes: ['user_name','comment','dessert_name'] // 이부분 수정해야 할 듯.
                 })
             
             if(sorted) {
