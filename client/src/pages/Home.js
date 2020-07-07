@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Route, Router } from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Login from "../Component/Login";
 
 import "../css/home.css";
