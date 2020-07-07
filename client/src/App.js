@@ -1,18 +1,19 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
   BrowserRouter as Router,
   Route,
   Link,
+  Redirect,
   BrowserRouter,
 } from "react-router-dom";
 //import axios from 'axios';
 import "./App.css";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
-import Mypage from "./pages/Mypage";
-import Signup from "./component/Signup";
-import Userinfo from "./pages/userinfo";
-import Editinfo from "./component/Editinfo";
+// import Mypage from "./pages/Mypage";
+// import Signup from "./component/Signup";
+// import Userinfo from "./pages/userinfo";
+// import Editinfo from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
 import HeaderComponent from "./component/HeaderComponent";
@@ -31,41 +32,48 @@ class App extends Component {
     // signUpLoading: false,
     // signUpDone: false,
     // signUpError: false,
-    // // test: "되라 좀",
+    // test: "되라 좀",
     // userInfo: {},
-    isLoggedIn:false,
-
+    isLoggedIn: false,
   };
 
   onSubmitForm = (e) => {
     e.preventDefault();
     this.setState({
-      isLoggedIn:true,
-    })
-  }
+      isLoggedIn: true,
+    });
+  };
 
 
   render() {
-    const { isLoggedIn } = this.state;
+    const {isLoggedIn} = this.state;
     const {onSubmitForm} = this;
-
-    // 20200708 일어나면 isLoggedIn true 조건으로 삼항연산자 써 볼 것.
+    console.log("App 컴포넌트 : ", isLoggedIn);
 
     return (
       <div>
         <BrowserRouter>
           <div>
-            {this.state.test}
-            <Route exact path="/" render={()=> <Home isLoggedIn={isLoggedIn} onSubmit={onSubmitForm} />}/>
-            <Route path="/main" component={Main} />
-
-            <Route path="/signup" component={Signup} />
-            <Route path="/mypage" component={Mypage} />
-
-            <Route path="/userinfo" component={Userinfo} />
-
+            {/*{this.state.test}*/}
+            {/*<Route path="/home" component={Home} />*/}
+            {/*<Route path="/signup" component={Signup} />*/}
+            {/*<Route path="/mypage" component={Mypage} />*/}
+            <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
+            {/*<Route path="/userinfo" component={Userinfo} />*/}
             {/*<Route path="/editinfo" component={Editinfo} />*/}
-            {/*<Route exact path="/" component={Home} />    지웠   */}
+            <Route path="/home" render={() => <Home isLoggedIn={isLoggedIn} onSubmit={onSubmitForm}/>}/>
+
+            <Route
+              path="/"
+              render={() => {
+                if (isLoggedIn) {
+                  return <Redirect to="/main"/>;
+                }
+                return <Redirect to="/home"/>;
+              }}
+            />
+
+
           </div>
         </BrowserRouter>
         {/*<div className="HeaderComponent">*/}
@@ -78,5 +86,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
