@@ -29,7 +29,12 @@ app.use(cors({
     credentials: true
 }))
 app.use(morgan('dev'))
-//app.use(session({})
+app.use(session({ // 세션을 관리하기 위해 필요한 미들웨어.
+    secret : 'Secret Key',
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(cookieparser()) //요청된 쿠키를 쉽게 추출할 수 있도록 해주는 미들웨어.
 
 
 app.get('/', (req,res) => {
