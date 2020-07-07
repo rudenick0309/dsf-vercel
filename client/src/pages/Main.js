@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 //const axios = require('axios'); 
 
 class Mainpage extends Component {
+  state = {
+    username: ''
+  };
+
   render(){
-    this.state = {
-        username: ''
-      };
+    console.log('메인 페이지에서!! : ', this.props);
     return (
       <div>
         <center>
