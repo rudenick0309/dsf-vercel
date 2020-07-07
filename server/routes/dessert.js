@@ -9,8 +9,8 @@ const router = express.Router();
 const { dessertController } = require('../controller') 
 console.log(dessertController)
 
-//* GET /dessert   <<-- 여기가 지도가 있는 2페이지가 될 것.
-router.get('/', dessertController.get)
+// //* GET /dessert   <<-- 여기가 지도가 있는 2페이지가 될 것.
+// router.get('/', dessertController.get)
 
 
 // * POST / dessert / plus / post

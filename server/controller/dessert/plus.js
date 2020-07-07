@@ -1,3 +1,5 @@
+//advanced
+
 const { desserts } = require('../../models');
 
 module.exports= {
@@ -8,7 +10,7 @@ module.exports= {
                 { dessert_ENname: req.body.dessert_ENname }
             }
             )) {
-            res.status(409).send('This dessert already exists.')
+            res.status(409).send('이미 존재하는 디저트입니다.')
         } else {
             let newDessert = await desserts.create(
                 {
@@ -19,19 +21,8 @@ module.exports= {
                     dessert_culture: req.body.dessert_culture
                 }
             )
-            res.status(200).send(newDessert)
+            res.status(200).send(JSON.stringify(newDessert))
         }
     }),
 
-    get: (async(req,res) => {
-        console.log('hi')
-        desserts.findAll({ 
-            where: {
-                culture: req.body.culture
-            }
-        })
-        .then(result => {
-            res.status(200).send(result)
-        })
-    })
 }

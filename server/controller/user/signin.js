@@ -15,7 +15,7 @@ module.exports = {
             }
         })
 
-        if(user) {
+        if(await user) {
             req.session.userid = user.id
             res.status(200).send(user)
         } else {
