@@ -117,5 +117,6 @@ dist
 
 # webstorm
 ../.idea/
+/.idea
 
 package-lock.json
