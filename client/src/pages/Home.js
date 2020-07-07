@@ -8,12 +8,15 @@ import "../css/home.css";
 
 class Home extends Component {
   render() {
+    const {isLoggedIn, onSubmit} = this.props;
+    console.log('홈커밍 : ', isLoggedIn)
+
     return (
       <div>
         {/* <Container></Container> */}
         <center>
           <div className={"bottom-component"}>
-            <Login />
+            <Login isLoggedIn={isLoggedIn} onSubmit={onSubmit}/>
             <Link to="/signup">
               <button
                 style={{
