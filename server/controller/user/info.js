@@ -2,7 +2,7 @@ const { users } = require('../../models');
 
 module.exports = {
     get: (async(req, res) => {
-        if (req.session.userid) {
+        if (await req.session.userid) {
             let findInfo = await users.findOne({
                 attributes: ['username','email','mobile'],
                 where: {
@@ -14,7 +14,7 @@ module.exports = {
 
     }),
     post: (async(req, res) => {
-        users.update(
+        await users.update(
             {
                 username: req.body.username,
                 email: req.body.email,

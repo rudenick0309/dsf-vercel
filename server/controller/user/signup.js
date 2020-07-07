@@ -21,7 +21,7 @@ module.exports = {
                     mobile: req.body.mobile
                 }
             )
-            res.status(200).send(newUser)
+            res.status(200).send('회원가입이 완료되었습니다.')
             res.end()
         } 
         

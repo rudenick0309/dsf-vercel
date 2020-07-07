@@ -14,6 +14,7 @@ const morgan = require('morgan')
 //Routes
 const userRouter = require('./routes/user')
 const dessertRouter = require('./routes/dessert')
+const commentRouter = require('./routes/comment')
 
 const app = express()
 // const port = 4000;
@@ -43,5 +44,6 @@ app.get('/', (req,res) => {
 
 app.use('/user', userRouter)
 app.use('/dessert', dessertRouter)
+app.use('/comment', commentRouter)
 
 app.listen(4000)
