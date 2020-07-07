@@ -17,7 +17,7 @@ class Editinfo extends Component {
       this.setState({ [key]: e.target.value });
     };
   
-    render() {
+    render( ) {
       return (
         <div>
           <center>
