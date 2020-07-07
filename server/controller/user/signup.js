@@ -11,7 +11,7 @@ module.exports = {
                 { email: req.body.email } // 여기서 계속 에러남..ㅜㅜㅜ 키값을 넣었어야지..! 그리고 객체 밖에 {} 표시 안해줘서 계속 에러났잖아..ㅜ
             }
             )) {
-            res.status(409).send('Already exists.')
+            res.status(409).send('이미 존재하는 사용자입니다.')
         } else {
             let newUser = await users.create(
                 {

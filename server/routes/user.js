@@ -3,8 +3,8 @@ const router = express.Router();
 
 const { userController } = require('../controller')
 
-// // * POST / user/signin
-// router.post('/signin', userController.singin.post)
+// * POST / user/signin
+router.post('/signin', userController.signin.post)
 
 // // * POST / user/signout
 // router.post('/signout', userController.signout.post)
@@ -12,8 +12,13 @@ const { userController } = require('../controller')
 // * POST / user/signup
 router.post('/signup', userController.signup.post)
 
-// // * GET / user/info
-// router.get('/info', userController.info.get)
+// * GET / user/info
+router.get('/info', userController.info.get)
+
+// * POST / user/info
+router.post('/info', userController.info.post)
+
+
 
 // * GET / user/nonmember  이것도 user에 놓는게 맞는지.. 
 // nonmember는 그냥 바로 /dessert로 들어가도 되는거 아닌가?.. post도 필요 없을텐데..
