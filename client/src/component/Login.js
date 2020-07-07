@@ -31,7 +31,7 @@ class Login extends Component {
                 borderRadius: "5px",
               }}
               type="username"
-              placeholder="USERNAME"
+              placeholder="EMAIL"
               onChange={this.handleInputValue("username")}
             ></input>
           </div>

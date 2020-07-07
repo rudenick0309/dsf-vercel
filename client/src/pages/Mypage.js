@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import {Welcomegreeting} from "../Component/welcomegreeting"
+import {Welcomegreeting} from "../component/welcomegreeting"
 
 
 

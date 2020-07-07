@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, Route, Router } from "react-router-dom";
 import styled from "styled-components";
-import Login from "../Component/Login";
+import Login from "../component/Login";
 
 import "../css/home.css";
 //const axios = require('axios');

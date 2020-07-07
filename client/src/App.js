@@ -10,13 +10,13 @@ import "./App.css";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
-import Signup from "./Component/Signup";
+import Signup from "./component/Signup";
 import Userinfo from "./pages/userinfo";
-import Editinfo from "./Component/Editinfo";
+import Editinfo from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
-import HeaderComponent from "./Component/HeaderComponent";
-import ShoppingAPI from "./Component/ShoppingAPI";
+import HeaderComponent from "./component/HeaderComponent";
+import ShoppingAPI from "./component/ShoppingAPI";
 
 class App extends Component {
   state = {
