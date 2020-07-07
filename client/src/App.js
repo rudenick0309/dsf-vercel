@@ -32,14 +32,18 @@ class App extends Component {
     // signUpLoading: false,
     // signUpDone: false,
     // signUpError: false,
+
     // test: "되라 좀",
     // userInfo: {},
     isLoggedIn: false,
+=======
+
   };
 
   onSubmitForm = (e) => {
     e.preventDefault();
     this.setState({
+
       isLoggedIn: true,
     });
   };
@@ -49,11 +53,14 @@ class App extends Component {
     const {isLoggedIn} = this.state;
     const {onSubmitForm} = this;
     console.log("App 컴포넌트 : ", isLoggedIn);
+=======
+
 
     return (
       <div>
         <BrowserRouter>
           <div>
+
             {/*{this.state.test}*/}
             {/*<Route path="/home" component={Home} />*/}
             {/*<Route path="/signup" component={Signup} />*/}
@@ -73,6 +80,8 @@ class App extends Component {
               }}
             />
 
+
+=======
 
           </div>
         </BrowserRouter>

@@ -13,14 +13,20 @@ class Home extends Component {
 
   render() {
     const {isLoggedIn, onSubmit} = this.props;
+
     console.log('홈 컴포넌트', isLoggedIn)
+=======
+
 
     return (
       <div>
         {/* <Container></Container> */}
         <center>
           <div className={"bottom-component"}>
+
             <Login isLoggedIn={isLoggedIn} onSubmit={onSubmit} />
+=======
+
             <Link to="/signup">
               <button
                 // style={{
