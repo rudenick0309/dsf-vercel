@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import {Viewinfo} from '../Component/viewinfo'
+import {Viewinfo} from '../component/viewinfo'
 
 //const axios = require('axios'); 
 
