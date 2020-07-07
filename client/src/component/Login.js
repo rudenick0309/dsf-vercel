@@ -20,13 +20,18 @@ class Login extends Component {
     this.setState({[key]: e.target.value});
   };
 
+
+
   render() {
-    const {isLoggedIn, onSubmit} = this.props;
-    console.log("로그인폼", isLoggedIn, onSubmit);
+    const {onSubmit} = this.props;
+
+
+
 
     return (
       <div>
         <center>
+          <form onSubmit={onSubmit}>
           <h1>Log In</h1>
           <form onSubmit={onSubmit}>
             <div>
@@ -71,7 +76,23 @@ class Login extends Component {
                 로그인
               </button>
 
-            </Link>
+
+          {/*<Link to="/main">*/}
+            <button
+              style={{
+                width: "200px",
+                height: "30px",
+                margin: "5px",
+                borderRadius: "5px",
+                backgroundColor: "white",
+              }}
+              type="submit"
+            >
+              로그인
+            </button>
+          {/*</Link>*/}
+=======
+
           </form>
         </center>
       </div>
