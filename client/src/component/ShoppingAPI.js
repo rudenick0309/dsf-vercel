@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { searchShopping } from "../searchShopping";
 // import { YOUTUBE_API_KEY } from "../../config/shopping";
-import axios from "axios";
+// import axios from "./node_modules/axios";
 
 class ShoppingAPI extends Component {
   constructor(props) {
@@ -67,6 +67,7 @@ export default ShoppingAPI;
 // PUT 데이터 수정
 // DELETE 데이터 제거
 
+// axios 라이브러리 사용하기
 // https://developers.naver.com/docs/search/shopping/
 /* 쇼핑검색 API 의 출력 결과에 아래 항목들이 추가됨(4월 22일 부) */
 // 필드 타입(string) 설명
