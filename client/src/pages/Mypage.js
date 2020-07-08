@@ -8,7 +8,7 @@ import {Welcomegreeting} from "../component/welcomegreeting"
 
 class Mypage extends Component {
   render(){
-    
+    // console.log('마이페이지')
 
     return (
       <div>

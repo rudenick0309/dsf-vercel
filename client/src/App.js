@@ -10,9 +10,9 @@ import {
 import "./App.css";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
-// import Mypage from "./pages/Mypage";
-// import Signup from "./component/Signup";
-// import Userinfo from "./pages/userinfo";
+import Mypage from "./pages/Mypage";
+import Signup from "./component/Signup";
+import Userinfo from "./pages/userinfo";
 // import Editinfo from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
@@ -36,7 +36,7 @@ class App extends Component {
     // test: "되라 좀",
     // userInfo: {},
     isLoggedIn: false,
-=======
+
 
   };
 
@@ -53,20 +53,19 @@ class App extends Component {
     const {isLoggedIn} = this.state;
     const {onSubmitForm} = this;
     console.log("App 컴포넌트 : ", isLoggedIn);
-=======
-
 
     return (
       <div>
+
         <BrowserRouter>
           <div>
 
             {/*{this.state.test}*/}
             {/*<Route path="/home" component={Home} />*/}
-            {/*<Route path="/signup" component={Signup} />*/}
-            {/*<Route path="/mypage" component={Mypage} />*/}
+            <Route path="/signup" component={Signup} />
+            <Route path="/mypage" component={Mypage} />
             <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
-            {/*<Route path="/userinfo" component={Userinfo} />*/}
+            <Route path="/userinfo" component={Userinfo} />
             {/*<Route path="/editinfo" component={Editinfo} />*/}
             <Route path="/home" render={() => <Home isLoggedIn={isLoggedIn} onSubmit={onSubmitForm}/>}/>
 
@@ -80,8 +79,6 @@ class App extends Component {
               }}
             />
 
-
-=======
 
           </div>
         </BrowserRouter>

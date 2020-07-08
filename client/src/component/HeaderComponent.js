@@ -57,7 +57,7 @@ class HeaderComponent extends React.Component {
     this.handleUserClick = this.handleUserClick.bind(this);
     this.handleGuestClick = this.handleGuestClick.bind(this);
     this.handleSignUpClick = this.handleSignUpClick.bind(this);
-    this.state = { isLoggedIn: false, isSignUp: false };
+    // this.state = { isLoggedIn: false, isSignUp: false };
     // this.handleChange = this.handleChange.bind(this);
   }
 
@@ -74,13 +74,14 @@ class HeaderComponent extends React.Component {
   }
 
   render() {
-    const { isLoggedIn } = this.state;
+    const { isLoggedIn } = this.props;
+
     const sign = <SignUpClick onClick={this.handleSignUpClick} />;
     const guest = <GuestClick onClick={this.handleGuestClick} />;
     const user = <UserClick onClick={this.handleUserClick} />;
     // const isSignUp = this.state.isSignUp;
     // const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
+    if (!isLoggedIn) {
       return (
         <div>
           {guest}

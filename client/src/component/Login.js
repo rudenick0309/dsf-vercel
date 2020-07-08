@@ -21,17 +21,13 @@ class Login extends Component {
   };
 
 
-
   render() {
     const {onSubmit} = this.props;
-
-
-
 
     return (
       <div>
         <center>
-          <form onSubmit={onSubmit}>
+
           <h1>Log In</h1>
           <form onSubmit={onSubmit}>
             <div>
@@ -61,23 +57,8 @@ class Login extends Component {
               ></input>
             </div>
 
-            <Link to="/main">
 
-              <button
-                style={{
-                  width: "200px",
-                  height: "30px",
-                  margin: "5px",
-                  borderRadius: "5px",
-                  backgroundColor: "white",
-                }}
-                type="submit"
-              >
-                로그인
-              </button>
-
-
-          {/*<Link to="/main">*/}
+            {/*<Link to="/main">*/}
             <button
               style={{
                 width: "200px",
@@ -90,8 +71,7 @@ class Login extends Component {
             >
               로그인
             </button>
-          {/*</Link>*/}
-=======
+            {/*</Link>*/}
 
           </form>
         </center>
