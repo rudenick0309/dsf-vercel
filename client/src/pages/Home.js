@@ -15,8 +15,6 @@ class Home extends Component {
     const {isLoggedIn, onSubmit} = this.props;
 
     console.log('홈 컴포넌트', isLoggedIn)
-=======
-
 
     return (
       <div>
@@ -25,8 +23,8 @@ class Home extends Component {
           <div className={"bottom-component"}>
 
             <Login isLoggedIn={isLoggedIn} onSubmit={onSubmit} />
-=======
 
+            {/*리다이렉트를 써서 이동시켜야 하나?*/}
             <Link to="/signup">
               <button
                 // style={{

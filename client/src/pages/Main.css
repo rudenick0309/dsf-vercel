@@ -1,0 +1,17 @@
+.header-bar {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+}
+
+.left-side {
+    margin-left: 0;
+}
+
+.right-side {
+    margin-right: 0;
+    width: 300px;
+}
+

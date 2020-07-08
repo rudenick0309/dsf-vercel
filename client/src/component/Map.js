@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import testPic from "../image/Imageee.jpg";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 import DessertSlide from "./DessertSlide";
 import "./Map.css";
 import CommentForm from "./CommentForm";

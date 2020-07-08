@@ -10,21 +10,23 @@ class CommentForm extends Component {
       [
         {
           id: 1,
-          이름: "북극",
-          comment: [
-            {선주: "1잠온다"},
-            {수빈: "1잠온다2"},
-            {윤혁: "1잠온다3"},
-          ]
+          앵글: {
+            comment: [
+              {선주: "1잠온다"},
+              {수빈: "1잠온다2"},
+              {윤혁: "1잠온다3"},
+            ]
+          },
         },
         {
           id: 2,
-          이름: "앵글",
-          comment: [
-            {선주: "2잠온다"},
-            {수빈: "2잠온다2"},
-            {윤혁: "2잠온다3"},
-          ]
+          북극: {
+            comment: [
+              {선주: "2잠온다"},
+              {수빈: "2잠온다2"},
+              {윤혁: "2잠온다3"},
+            ]
+          }
         }
       ],
     // 다른 것들도 들어가야 하는데 너무 지저분해져서 안 함.
@@ -102,9 +104,9 @@ class CommentForm extends Component {
         </div>
 
         <div className={"comment-component"}>
-          {dataToCommentList.map((el) => {
-            return <CommentList reply={el}/>;
-          })}
+          {/*{dataToCommentList.map((el) => {*/}
+          {/*  return <CommentList reply={el}/>;*/}
+          {/*})}*/}
         </div>
       </div>
     );
