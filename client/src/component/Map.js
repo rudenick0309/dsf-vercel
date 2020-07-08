@@ -4,6 +4,7 @@ import testPic from "../image/Imageee.jpg";
 import DessertSlide from "./DessertSlide";
 import "./Map.css";
 import CommentForm from "./CommentForm";
+import axios from "axios";
 
 class Map extends Component {
   state = {
@@ -88,12 +89,24 @@ class Map extends Component {
   };
 
   onClickCulture = (cultureName) => () => {
+  // onClickCulture = (cultureName) => {
     this.setState({이름: cultureName});
     this.props.onClick();
 
     this.setState({
       count: 0,
     });
+
+    // let dessert_ = await axios.get("http://localhost:4000/find", {
+    //   dessert_culture: "유럽"
+    // });
+    // console.log("디저트슬라이드 dessert", dessert_);
+    // let json = dessert_.json();
+    // console.log("디저트슬라이드 json", json);
+    // this.setState({
+    //   json,
+    // });
+
   };
 
   //온클릭레프트랑 롸이트는 디저트슬라이드에 넘겨주는 것들.
@@ -134,9 +147,8 @@ class Map extends Component {
   };
 
 
-
   render() {
-    const {imageFile, x, y, 이름, count, } = this.state;
+    const {imageFile, x, y, 이름, count,} = this.state;
     const {trackMousePoint, findCulture, onClickCulture, onClickLeft, onClickRight} = this;
     const {connection} = this.props;
     const hoverName = findCulture(x, y);
@@ -180,7 +192,7 @@ class Map extends Component {
         </div>
         <div>
           {/*{comments.map((el) =>*/}
-          <CommentForm connection={connection} clickName={이름} />
+          <CommentForm connection={connection} clickName={이름}/>
 
         </div>
       </div>

@@ -5,6 +5,32 @@ import axios from "axios";
 
 // 얘는 Map 에서 가져온거다
 class CommentForm extends Component {
+  // state = {
+  //   reply:
+  //     [
+  //       {
+  //         id: 1,
+  //         앵글: {
+  //           comment: [
+  //             {선주: "1잠온다"},
+  //             {수빈: "1잠온다2"},
+  //             {윤혁: "1잠온다3"},
+  //           ]
+  //         },
+  //       },
+  //       {
+  //         id: 2,
+  //         북극: {
+  //           comment: [
+  //             {선주: "2잠온다"},
+  //             {수빈: "2잠온다2"},
+  //             {윤혁: "2잠온다3"},
+  //           ]
+  //         }
+  //       }
+  //     ],
+  //   // 다른 것들도 들어가야 하는데 너무 지저분해져서 안 함.
+  // };
   state = {
     reply:
       [
@@ -32,6 +58,7 @@ class CommentForm extends Component {
     // 다른 것들도 들어가야 하는데 너무 지저분해져서 안 함.
   };
 
+
   // onSubmitForm = async (e) => {
   //   e.preventDefault();           //axios 에서 return을 붙일꺼냐?
   //
@@ -48,7 +75,20 @@ class CommentForm extends Component {
   //     .catch(err => console.log(err));
   // };
 
-  componentDidMount() {
+  // 이것도 클릭이네.... clickName 이 필요함.
+  async componentDidMount() {
+    console.log('코멘트폼 컴포넌트디드마운트', this.props.clickName)
+    let commentData = await axios.post('http://localhost:4000/comment/sorting',
+      {
+        culture:'유럽',
+      })
+
+    // 여기서 map 을 써야 할까? 함 쓰 보자!
+    commentData.data.map((el) => {
+      console.log('과연 될 것인가!', el)
+      return
+    })
+    // console.log('코멘트폼 댓글', commentData.data[0] );
   }
 
   render() {
