@@ -23,7 +23,7 @@ const app = express()
 sequelize.sync()
 
 //use middleware
-app.use(bodyparser());
+app.use(bodyparser.json());
 app.use(cors({
     origin: ['http://localhost:3000'],
     method: ['GET', 'POST'],
