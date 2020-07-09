@@ -15,8 +15,8 @@ router.post('/signup', userController.signup.post)
 // * GET / user/info
 router.get('/info', userController.info.get)
 
-// * POST / user/info
-router.post('/info', userController.info.post)
+// * PUT / user/info
+router.put('/info', userController.info.put)
 
 
 
