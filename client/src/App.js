@@ -13,9 +13,8 @@ import Home from "./pages/Home";
 import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
 import Signup from "./component/Signup";
-import Userinfo from "./pages/userinfo";
-
-import Editinfo from "./component/Editinfo";
+import {Userinfo} from "./pages/userinfo";
+import {Editinfo} from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
 import HeaderComponent from "./component/HeaderComponent";
@@ -27,8 +26,8 @@ class App extends Component {
     userinfo: {},
     email: null,
     password: null,
-    username: null,
-    mobile: null
+    username: '',
+    mobile: ''
   };
 
 
@@ -83,6 +82,7 @@ class App extends Component {
   render() {
     const {isLoggedIn} = this.state;
     const {onSubmitForm, onChangeValue} = this;
+    const {username, email, mobile} = this.state
     console.log("App 컴포넌트 : ", isLoggedIn);
 
     return (
@@ -93,11 +93,11 @@ class App extends Component {
             {/*{this.state.test}*/}
             {/*<Route path="/home" component={Home} />*/}
             <Route path="/signup" component={Signup} />
-            <Route path="/mypage" component={Mypage} />
             <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
-            <Route path="/userinfo" render={() => <Userinfo getUserinfo={this.getUserinfo} />} />
-            <Route path="/editinfo" component={Editinfo} />
+            <Route path="/userinfo" render={() => <Userinfo getUserinfo={this.getUserinfo} username={username} email={email} mobile={mobile}/>} />
+            <Route path="/editinfo" render={() => <Editinfo getUserinfo={this.getUserinfo} username={username} email={email} mobile={mobile}/>} />
             <Route path="/home" render={() => <Home onChangeValue={onChangeValue} isLoggedIn={isLoggedIn} onSubmit={onSubmitForm} />}/>
+            <Route path="/mypage"render={() => <Mypage getUserinfo={this.getUserinfo} username={username} />}/>
 
             <Route
               path="/"
