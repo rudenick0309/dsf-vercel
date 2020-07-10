@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Link, Redirect, withRouter, Router} from "react-router-dom";
 import axios from "axios";
-import history from '../history';
 
 
 // const axios = require('./node_modules/axios');
@@ -24,7 +23,6 @@ class Login extends Component {
     
     return (
       <div>
-        <Router history = {history} />
         <center>
           <h1>Log In</h1>
           
