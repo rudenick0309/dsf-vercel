@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Route, Router } from "react-router-dom";
-// import styled from "styled-components";
+import styled from "styled-components";
 import Login from "../component/Login";
 
 import "../css/home.css";
@@ -18,7 +18,7 @@ class Home extends Component {
 
     return (
       <div>
-        {/* <Container></Container> */}
+        <Container></Container>
         <center>
           <div className={"bottom-component"}>
 
@@ -30,13 +30,13 @@ class Home extends Component {
             {/*리다이렉트를 써서 이동시켜야 하나?*/}
             <Link to="/signup">
               <button
-                // style={{
-                //   width: "200px",
-                //   height: "30px",
-                //   margin: "5px",
-                //   borderRadius: "5px",
-                //   backgroundColor: "white",
-                // }}
+                style={{
+                  width: "200px",
+                  height: "30px",
+                  margin: "5px",
+                  borderRadius: "5px",
+                  backgroundColor: "white",
+                }}
                 type="submit"
               >
                 회원가입
@@ -45,13 +45,13 @@ class Home extends Component {
 
             <Link to="/main">
               <button
-                // style={{
-                //   width: "200px",
-                //   height: "30px",
-                //   margin: "5px",
-                //   borderRadius: "5px",
-                //   backgroundColor: "white",
-                // }}
+                style={{
+                  width: "200px",
+                  height: "30px",
+                  margin: "5px",
+                  borderRadius: "5px",
+                  backgroundColor: "white",
+                }}
                 type="submit"
               >
                 비회원으로 시작
@@ -64,17 +64,17 @@ class Home extends Component {
   }
 }
 
-// const Container = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: url(https://ifh.cc/g/BBELDa.jpg);
-//   background-size: 80%;
-//   background-repeat: no-repeat;
-//   background-position: top;
-//   z-index: -100;
-// `;
+const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://ifh.cc/g/BBELDa.jpg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -100;
+`;
 
 export default Home;
