@@ -51,7 +51,7 @@ class App extends Component {
 
   onSubmitForm = async (e) => {  //form onSubmit={onSubmit} 을 변경 
     e.preventDefault();
-     await axios.post("http://localhost:4000/user/signin", 
+     await axios.post("http://13.125.58.125:4000/user/signin", 
     {
       email: this.state.email,
       password: this.state.password,
@@ -73,7 +73,7 @@ class App extends Component {
   }
 
   getUserinfo() {
-    axios.get('http://localhost:4000/user/info').then(res => {
+    axios.get('http://13.125.58.125:4000/user/info').then(res => {
       console.log(res.data);
       this.setState({ userinfo: res.data });
     });
