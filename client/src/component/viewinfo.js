@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 export function Viewinfo() {
-axios.get('https://localhost:4000/user/info')
+axios.get('https://13.125.58.125:4000/user/info')
 .then((res)=> {
   console.log(res);
 })

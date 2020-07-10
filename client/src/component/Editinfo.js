@@ -25,7 +25,7 @@ class Editinfo extends Component {
             <h1>회원정보 수정</h1>
             <form onSubmit={e => {
             e.preventDefault();
-            axios.put('http://localhost:4000/user/resign')
+            axios.put('http://13.125.58.125:4000/user/resign')
               .then((res) => {
                 alert(" 회원정보가 정상적으로 수정되었습니다.")
               }) 

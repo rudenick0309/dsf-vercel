@@ -44,7 +44,7 @@ class DessertSlide extends Component {
       // if (dessert previousState.dessert !== null && this.state.dessert !== null) {
       //   if (previousState.dessert !== this.state.dessert) {
       // 1. state의 초기화 -> 업데이트  //  2. state의 누적   // 여기서는 1.
-      let dessert = await axios.post("http://localhost:4000/dessert/find", {
+      let dessert = await axios.post("http://13.125.58.125:4000/dessert/find", {
         dessert_culture: clickName,
       });
       // console.log('디저트슬라이드 dessert', dessert_.data)  // 이거 맞음. 객체 형태로 디저트 리스트 컴포넌트에 넘기자.

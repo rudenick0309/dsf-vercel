@@ -51,7 +51,7 @@ class Signup extends Component {
             <h1>Sign Up</h1>
             <form onSubmit={e => {
             e.preventDefault();
-            axios.post('http://localhost:4000/user/signup', {
+            axios.post('http://13.125.58.125:4000/user/signup', {
               username: username,
               password: password,
               email: email,
