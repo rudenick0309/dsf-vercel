@@ -27,6 +27,8 @@ class App extends Component {
     userinfo: {},
     email: null,
     password: null,
+    username: null,
+    mobile: null
   };
 
 
@@ -71,6 +73,13 @@ class App extends Component {
       
   }
 
+  getUserinfo() {
+    axios.get('http://localhost:4000/user/info').then(res => {
+      console.log(res.data);
+      this.setState({ userinfo: res.data });
+    });
+  }
+
   render() {
     const {isLoggedIn} = this.state;
     const {onSubmitForm, onChangeValue} = this;
@@ -86,7 +95,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/mypage" component={Mypage} />
             <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
-            <Route path="/userinfo" component={Userinfo} />
+            <Route path="/userinfo" render={() => <Userinfo getUserinfo={this.getUserinfo} />} />
             <Route path="/editinfo" component={Editinfo} />
             <Route path="/home" render={() => <Home onChangeValue={onChangeValue} isLoggedIn={isLoggedIn} onSubmit={onSubmitForm} />}/>
 
