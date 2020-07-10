@@ -14,8 +14,8 @@ import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
 import Signup from "./component/Signup";
 import Userinfo from "./pages/userinfo";
-import history from './history';
-// import Editinfo from "./component/Editinfo";
+
+import Editinfo from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
 import HeaderComponent from "./component/HeaderComponent";
@@ -58,12 +58,10 @@ class App extends Component {
     )
       .then(res => {
         console.log(res.status)
-      if(res.status === 200) {
+      if(res.status === 201) {
         console.log("안뇽!")
-        // handleIsLoginChange()
         this.setState({isLoggedIn :true})
-        
-        this.props.history.push('/main');
+        Redirect("/main")
       }
       })
       .catch(err => {
@@ -80,17 +78,16 @@ class App extends Component {
 
     return (
       <div>
-
         <BrowserRouter>
           <div>
-
+          
             {/*{this.state.test}*/}
             {/*<Route path="/home" component={Home} />*/}
             <Route path="/signup" component={Signup} />
             <Route path="/mypage" component={Mypage} />
             <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
             <Route path="/userinfo" component={Userinfo} />
-            {/*<Route path="/editinfo" component={Editinfo} />*/}
+            <Route path="/editinfo" component={Editinfo} />
             <Route path="/home" render={() => <Home onChangeValue={onChangeValue} isLoggedIn={isLoggedIn} onSubmit={onSubmitForm} />}/>
 
             <Route
