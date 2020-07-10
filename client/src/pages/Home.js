@@ -12,9 +12,9 @@ class Home extends Component {
   }
 
   render() {
-    const {isLoggedIn, onSubmit} = this.props;
+    const {isLoggedIn, onSubmit, onChangeValue} = this.props;
 
-    console.log('홈 컴포넌트', isLoggedIn)
+    console.log('홈 컴포넌트', onSubmit)
 
     return (
       <div>
@@ -22,7 +22,10 @@ class Home extends Component {
         <center>
           <div className={"bottom-component"}>
 
-            <Login isLoggedIn={isLoggedIn} onSubmit={onSubmit} />
+            <Login isLoggedIn={isLoggedIn} 
+            onSubmit={onSubmit} 
+            onChangeValue={onChangeValue}
+            />
 
             {/*리다이렉트를 써서 이동시켜야 하나?*/}
             <Link to="/signup">
