@@ -18,30 +18,30 @@ class Signup extends Component {
       this.setState({ [key]: e.target.value });
     };
 
-    checkPW = e => {
-      e.preventDefault();
-      //비밀번호 유효성검사(영문,숫자 혼합 6~20)
-      const chkPwd = function(str) {
-        var reg_pwd = /^.*(?=.{6,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
-        return !reg_pwd.test(str) ? false : true;
-      };
-      if (chkPwd(this.state.re_pw) === false) {
-        alert("영문,숫자를 혼합하여 6~12자 이내");
-        this.setState({
-          password: "",
-          passwordcheck: ""
-        });
-      } else {
-        if (this.state.password === this.state.passwordcheck) {
-          alert("일치합니다.");
-          this.setState({
-            pwCheck: this.state.passwordcheck
-          });
-        } else {
-          alert("불일치합니다.");
-        }
-      }
-    };
+    // checkPW = e => {
+    //   e.preventDefault();
+    //   //비밀번호 유효성검사(영문,숫자 혼합 6~20)
+    //   const chkPwd = function(str) {
+    //     var reg_pwd = /^.*(?=.{6,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
+    //     return !reg_pwd.test(str) ? false : true;
+    //   };
+    //   if (chkPwd(this.state.re_pw) === false) {
+    //     alert("영문,숫자를 혼합하여 6~12자 이내");
+    //     this.setState({
+    //       password: "",
+    //       passwordcheck: ""
+    //     });
+    //   } else {
+    //     if (this.state.password === this.state.passwordcheck) {
+    //       alert("일치합니다.");
+    //       this.setState({
+    //         pwCheck: this.state.passwordcheck
+    //       });
+    //     } else {
+    //       alert("불일치합니다.");
+    //     }
+    //   }
+    // };
   
     render() {
       const {username, password, email, mobile} = this.state
@@ -91,7 +91,7 @@ class Signup extends Component {
                   onChange={this.handleInputValue('email')}
                 ></input>
               </div>
-              <div checkPW={this.checkPW}>
+              {/* <div checkPW={this.checkPW}> */}
               <div>
                 <input
                   style={{
@@ -119,7 +119,7 @@ class Signup extends Component {
                   placeholder="PASSWORD CHECK"
                 ></input>
               </div>
-              </div>
+              {/* </div> */}
               <div>
                 <input
                   style={{
