@@ -14,7 +14,7 @@ import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
 import Signup from "./component/Signup";
 import {Userinfo} from "./pages/userinfo";
-import {Editinfo} from "./component/Editinfo";
+import Editinfo from "./component/Editinfo";
 // import { Welcomegreeting } from "./Components/welcomegreeting";
 
 import HeaderComponent from "./component/HeaderComponent";
