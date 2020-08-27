@@ -8,7 +8,6 @@ class CommentList extends Component {
 
   render() {
     const {commentData} = this.props;
-    console.log('코맨트 리스트에서', commentData === null)
 
     const {comment,dessert_name,user_name} = commentData;
 
