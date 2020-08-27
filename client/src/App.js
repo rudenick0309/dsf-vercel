@@ -6,18 +6,13 @@ import {
   Redirect,
   BrowserRouter,
 } from "react-router-dom";
-//import axios from 'axios';
+
 import "./css/App.css";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";
 import Signup from "./component/Signup";
 import Userinfo from "./pages/userinfo";
-// import Editinfo from "./component/Editinfo";
-// import { Welcomegreeting } from "./Components/welcomegreeting";
-
-import HeaderComponent from "./component/HeaderComponent";
-import ShoppingAPI from "./component/ShoppingAPI";
 
 class App extends Component {
   state = {
