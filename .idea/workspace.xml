@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e7d5aaa-7212-4e37-be8f-528a48881f3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/component/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/DessertList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/DessertSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertSlide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/HeaderComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Map.js" afterDir="false" />
+    <list default="true" id="1e7d5aaa-7212-4e37-be8f-528a48881f3d" name="Default Changelist" comment="Update : maked css folder and added css files">
+      <change afterPath="$PROJECT_DIR$/client/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\image" />
     </key>
@@ -70,6 +73,28 @@
       <workItem from="1594094211688" duration="194000" />
       <workItem from="1594094516283" duration="3391000" />
     </task>
+    <task id="LOCAL-00001" summary="Update : formatting the code">
+      <created>1598509084728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598509084728</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test: git test">
+      <created>1598509317842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598509317842</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update : maked css folder and added css files">
+      <created>1598509649000</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598509649000</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +111,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update : formatting the code" />
+    <MESSAGE value="test: git test" />
+    <MESSAGE value="Update : maked css folder and added css files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update : maked css folder and added css files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594032054716">
@@ -116,5 +147,9 @@
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="2197" y="56" key="SettingsEditor/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1594010887076" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1598509671566">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1598509671566" />
   </component>
 </project>
