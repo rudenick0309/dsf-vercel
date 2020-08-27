@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import DessertList from "./DessertList";
-import "./DessertSlide.css";
+import "../css/DessertSlide.css";
 import axios from "axios";
 
 class DessertSlide extends Component {

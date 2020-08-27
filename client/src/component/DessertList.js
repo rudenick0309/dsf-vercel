@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./DessertList.css";
+import "../css/DessertList.css";
 
 class DessertList extends Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import testPic from "../image/Imageee.jpg";
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 import DessertSlide from "./DessertSlide";
-import "./Map.css";
+import "../css/Map.css";
 import CommentForm from "./CommentForm";
 import axios from "axios";
 
