@@ -7,7 +7,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 //import axios from 'axios';
-import "./App.css";
+import "./css/App.css";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import Mypage from "./pages/Mypage";

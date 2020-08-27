@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import CommentList from "./CommentList";
-import "./CommentForm.css";
+import "../css/CommentForm.css";
 import axios from "axios";
 
 // 얘는 Map 에서 가져온거다
