@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-const axios = require('axios'); 
+const axios = require('axios');
 
 class Userinfo extends Component {
     constructor(props){
@@ -11,28 +11,28 @@ class Userinfo extends Component {
         }
     }
 
-    componentDidMount(){ 
+    componentDidMount(){
         this.getName();
-  
-      } 
-  
+
+      }
+
       getName(){
-           //유저네임 가져옴
-           const apiUrl = 'dummy.json'; 
-  
+
+           const apiUrl = 'dummy.json';
+
            axios.get(apiUrl)
-              .then(data => { 
-               //가지고 온 유저네임을 state에 저장. 
-               this.setState({ 
+              .then(data => {
+
+               this.setState({
                    username : data.username
-                  }); 
-              }).catch(error => { 
-                  console.log(error); 
-              }); 
+                  });
+              }).catch(error => {
+                  console.log(error);
+              });
           }
   }
 
-  
+
 
 
   export function Welcomegreeting(props) {

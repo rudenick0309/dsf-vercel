@@ -2,8 +2,6 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
 
-// const axios = require('./node_modules/axios');
-
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -57,8 +55,6 @@ class Login extends Component {
               ></input>
             </div>
 
-
-            {/*<Link to="/main">*/}
             <button
               style={{
                 width: "200px",

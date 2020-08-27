@@ -56,8 +56,6 @@ class Map extends Component {
     });
   };
 
-  // hover할 때, 마우스 주위에 펼쳐지는 동그란 원 처럼 디저트 리스트가 나오게 하는? 클릭을 안하더라도!
-  // 일단 이 기능(findCulture)은 당장에는 필요가 없다. 이런ㅋㅋ
   findCulture = (a, b) => {
     let result = null;
 
@@ -89,27 +87,14 @@ class Map extends Component {
   };
 
   onClickCulture = (cultureName) => () => {
-  // onClickCulture = (cultureName) => {
     this.setState({이름: cultureName});
     this.props.onClick();
 
     this.setState({
       count: 0,
     });
-
-    // let dessert_ = await axios.get("http://localhost:4000/find", {
-    //   dessert_culture: "유럽"
-    // });
-    // console.log("디저트슬라이드 dessert", dessert_);
-    // let json = dessert_.json();
-    // console.log("디저트슬라이드 json", json);
-    // this.setState({
-    //   json,
-    // });
-
   };
 
-  //온클릭레프트랑 롸이트는 디저트슬라이드에 넘겨주는 것들.
   onClickLeft = () => {
     this.setState((prevState) => {
       return {
@@ -124,7 +109,6 @@ class Map extends Component {
           count: prevState.count++
         };
       });
-      // console.log("왼쪽화살표 눌렀을 때 확인", this.state.count);
     }
   };
 
@@ -142,7 +126,6 @@ class Map extends Component {
           count: prevState.count--
         };
       });
-      // console.log("오른쪽화살표 눌렀을 때 확인", this.state.count);
     }
   };
 
@@ -152,16 +135,13 @@ class Map extends Component {
     const {trackMousePoint, findCulture, onClickCulture, onClickLeft, onClickRight} = this;
     const {connection} = this.props;
     const hoverName = findCulture(x, y);
-    // console.log('콘솔 함 찍어보입시드', 이름)
 
     return (
       <div>
         <div className={"MapCSS"} onMouseMove={trackMousePoint}>
-          {/* 이미지 크기 : 1213 x 647 */}
+
           <img className={"imgOfMapCSS"} src={imageFile} useMap={"#Map"}/>
           <map name={"Map"} id={"Map"}>
-            {/* 코드량이 너무 많다...동적 함수로 만들수는 없나?*/}
-            {/* 방금 css로 이미지 자체를 줄여봤는데, 이러니까 좌표는 고정인데 이미지 크기만 변경되는 이런 더~러운~ 상황~~~ */}
             <area name={"오세"} alt={"오세"} shape={"rect"} coords={"500,460,670,580"} onClick={onClickCulture("오세")}
                   tabIndex={"1"}/>
             <area name={"라틴"} alt={"라틴"} shape={"rect"} coords={"1015,345,1180,600"} onClick={onClickCulture("라틴")}
@@ -186,12 +166,12 @@ class Map extends Component {
 
         </div>
         <div>
-          {/*{findCulture(x, y)}*/}
+
           <DessertSlide count={count} clickLeft={onClickLeft} clickRight={onClickRight} hoverName={hoverName}
                         clickName={이름}/>
         </div>
         <div>
-          {/*{comments.map((el) =>*/}
+
           <CommentForm connection={connection} clickName={이름}/>
 
         </div>

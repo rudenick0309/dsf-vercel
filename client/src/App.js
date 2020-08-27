@@ -21,29 +21,12 @@ import ShoppingAPI from "./component/ShoppingAPI";
 
 class App extends Component {
   state = {
-    // logInLoading: false,
-    // logInDone: false,
-    // logInError: false,
-    //
-    // logOutLoading: false,
-    // logOutDone: false,
-    // logOutError: false,
-    //
-    // signUpLoading: false,
-    // signUpDone: false,
-    // signUpError: false,
-
-    // test: "되라 좀",
-    // userInfo: {},
     isLoggedIn: false,
-
-
   };
 
   onSubmitForm = (e) => {
     e.preventDefault();
     this.setState({
-
       isLoggedIn: true,
     });
   };
@@ -60,13 +43,10 @@ class App extends Component {
         <BrowserRouter>
           <div>
 
-            {/*{this.state.test}*/}
-            {/*<Route path="/home" component={Home} />*/}
             <Route path="/signup" component={Signup} />
             <Route path="/mypage" component={Mypage} />
             <Route path="/main" render={() => <Main isLoggedIn={isLoggedIn} />}/>
             <Route path="/userinfo" component={Userinfo} />
-            {/*<Route path="/editinfo" component={Editinfo} />*/}
             <Route path="/home" render={() => <Home isLoggedIn={isLoggedIn} onSubmit={onSubmitForm}/>}/>
 
             <Route
@@ -82,12 +62,6 @@ class App extends Component {
 
           </div>
         </BrowserRouter>
-        {/*<div className="HeaderComponent">*/}
-        {/*  <HeaderComponent />*/}
-        {/*</div>*/}
-        {/*<div className="ShoppingAPI">*/}
-        {/*  <ShoppingAPI />*/}
-        {/*</div>*/}
       </div>
     );
   }
