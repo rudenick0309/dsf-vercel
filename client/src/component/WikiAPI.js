@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class WikiAPI extends Component {
   render() {
     const {connection} = this.props;
-    if (connection) {    // connection이 트루면 쇼핑 에이피아이 문구가 뜸.
+    if (connection) {
       return (
         <>
           <div>
@@ -14,7 +14,7 @@ class WikiAPI extends Component {
       )
 
     }
-    return (        // 여기는 비어있게
+    return (
       <>
         <div>
 

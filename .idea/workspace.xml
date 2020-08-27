@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e7d5aaa-7212-4e37-be8f-528a48881f3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/component/CommentForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/CommentList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/image/Imageee.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/DessertList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/DessertSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertSlide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/HeaderComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

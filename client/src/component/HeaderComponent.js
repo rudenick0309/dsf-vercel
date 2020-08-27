@@ -79,8 +79,7 @@ class HeaderComponent extends React.Component {
     const sign = <SignUpClick onClick={this.handleSignUpClick} />;
     const guest = <GuestClick onClick={this.handleGuestClick} />;
     const user = <UserClick onClick={this.handleUserClick} />;
-    // const isSignUp = this.state.isSignUp;
-    // const isLoggedIn = props.isLoggedIn;
+
     if (!isLoggedIn) {
       return (
         <div>
@@ -92,15 +91,10 @@ class HeaderComponent extends React.Component {
 
     return <div>{user}</div>;
 
-    /*
-    const { isSignUp } = this.state;
-    if (isSignUp) {
-      return <div>{(sign = <div></div>)}</div>;
-    }*/
+
   }
 }
 
-// ReactDOM.render(</*페이지*/ isLoggedIn={true}>, document.getElementById("root"));
 
 export default HeaderComponent;
-// 수정본 기기
+
