@@ -13,30 +13,35 @@ class Mainpage extends Component {                   //mypage가 여기서 연�
   state = {
     username: "",
     connection: false,
+    dessert_detail:null,
   };
 
-  onClickConnection = () => {
+  onClickConnection = (clickDessert) => {
     this.setState({
-      connection: true,
+      connection:true,
     });
   };
+
+  onClickDessert = (data) => {
+    // alert(`${data.id}를 선택했네`)
+    // console.log('다시 첫 화면이죠', data)
+    // this.setState({
+    //   dessert_detail:data,
+    // })
+  }
 
   render() {
     console.log("메인 페이지에서!! : ", this.props);
     const {isLoggedIn} = this.props;
-    const {connection} = this.state;
-    const {onClickConnection} = this;
+    const {connection,} = this.state;
+    const {onClickConnection, onClickDessert} = this;
 
     return (
       <div className={"center"}>
         <center>
-          {/*<h1>메인 페이지</h1>*/}
           <HeaderComponent className={"header-bar"} isLoggedIn={isLoggedIn}/>
-          {/*isLoggedIn이 트루냐 폴스냐 그것이 문제로다*/}
-
 
           {isLoggedIn
-
             ? <>
               <Link to="/mypage">
                 <button
@@ -60,7 +65,7 @@ class Mainpage extends Component {                   //mypage가 여기서 연�
 
           <div className={"center"}>
             <div className={"left-side"}>
-              <Map onClick={onClickConnection} connection={connection}/>
+              <Map onClickDessert={onClickDessert} onClick={onClickConnection} connection={connection}/>
             </div>
 
             <div className={"right-side"}>
@@ -68,7 +73,7 @@ class Mainpage extends Component {                   //mypage가 여기서 연�
                 <ShoppingAPI connection={connection}/>
               </div>
               <div>
-                <WikiAPI connection={connection}/>
+                <WikiAPI  connection={connection}/>
               </div>
             </div>
 

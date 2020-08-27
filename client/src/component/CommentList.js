@@ -9,7 +9,7 @@ class CommentList extends Component {
 
   render() {
     const {commentData} = this.props;
-    console.log('코맨트 리스트에서', commentData === null)    // 이게 null 일 수는 없겟구나ㅋㅋㅋㅋ
+    // console.log('코맨트 리스트에서', commentData === null)    // 이게 null 일 수는 없겟구나ㅋㅋㅋㅋ
 
     const {comment,dessert_name,user_name} = commentData;
 

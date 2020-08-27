@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e7d5aaa-7212-4e37-be8f-528a48881f3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/component/CommentForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/CommentList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/image/Imageee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/CommentList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/DessertList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/DessertSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DessertSlide.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/WikiAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/WikiAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,9 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../zero/zerocho-react-new/one" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
@@ -67,6 +72,9 @@
       <workItem from="1594009941410" duration="7812000" />
       <workItem from="1594094211688" duration="194000" />
       <workItem from="1594094516283" duration="3391000" />
+      <workItem from="1594252871002" duration="38649000" />
+      <workItem from="1594331248495" duration="7412000" />
+      <workItem from="1594384872207" duration="10000" />
     </task>
     <servers />
   </component>
@@ -86,10 +94,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594032054716">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594384879877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594032054716" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594384879877" />
     <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1594110405148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

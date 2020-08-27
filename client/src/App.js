@@ -21,29 +21,25 @@ import ShoppingAPI from "./component/ShoppingAPI";
 
 class App extends Component {
   state = {
-    // logInLoading: false,
-    // logInDone: false,
-    // logInError: false,
-    //
-    // logOutLoading: false,
-    // logOutDone: false,
-    // logOutError: false,
-    //
-    // signUpLoading: false,
-    // signUpDone: false,
-    // signUpError: false,
-
-    // test: "되라 좀",
-    // userInfo: {},
     isLoggedIn: false,
-
-
   };
 
   onSubmitForm = (e) => {
     e.preventDefault();
-    this.setState({
 
+
+
+
+
+
+
+
+
+
+
+
+
+    this.setState({
       isLoggedIn: true,
     });
   };
