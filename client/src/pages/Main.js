@@ -4,10 +4,10 @@ import Map from "../component/Map";
 import HeaderComponent from "../component/HeaderComponent";
 import ShoppingAPI from "../component/ShoppingAPI";
 import WikiAPI from "../component/WikiAPI";
-import "./Main.css";
+import "../css/Main.css";
 import Mypage from "./Mypage";
 
-//const axios = require('axios'); 
+//const axios = require('axios');
 
 class Mainpage extends Component {                   //mypage가 여기서 연결이 된다.
   state = {
