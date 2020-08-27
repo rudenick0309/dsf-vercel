@@ -13,40 +13,7 @@ class Map extends Component {
     x: 0,
     y: 0,
     count: 0,
-    이름: null,  //클릭 했을 때, 여기에 culture명을 넣고, Culture.이름을 토대로 컴포에 전달
-    // 북극: false,               1
-    // 앵글로: false,              2
-    // 라틴아메리카: false,         3
-    // 오세아니아: false,          4
-    // 아프리카: false,             5
-    // 이슬람: false,              6
-    // 유럽: false,               7
-    // 동부아시아: false,
-    // 남부아시아: false,
-    // 동남아시아: false,
-    // comments: [
-    //   {
-    //     북극: {
-    //       id:1,
-    //       comment : {
-    //         선주 : "1잠온다",
-    //         수빈 : "1잠온다2",
-    //         윤혁 : "1잠온다3",
-    //       }
-    //     },
-    //     앵글: {
-    //       id:2,
-    //       comments : {
-    //         선주 : "2잠온다",
-    //         수빈 : "2잠온다2",
-    //         윤혁 : "2잠온다3",
-    //       }
-    //     }
-    //   }
-    //
-    // ],
-
-
+    clickName:null,
   };
 
   trackMousePoint = (event) => {
@@ -90,23 +57,11 @@ class Map extends Component {
 
   onClickCulture = (cultureName) => () => {
   // onClickCulture = (cultureName) => {
-    this.setState({이름: cultureName});
+    this.setState({clickName: cultureName});
     this.props.onClick();
-
     this.setState({
       count: 0,
     });
-
-    // let dessert_ = await axios.get("http://localhost:4000/find", {
-    //   dessert_culture: "유럽"
-    // });
-    // console.log("디저트슬라이드 dessert", dessert_);
-    // let json = dessert_.json();
-    // console.log("디저트슬라이드 json", json);
-    // this.setState({
-    //   json,
-    // });
-
   };
 
   //온클릭레프트랑 롸이트는 디저트슬라이드에 넘겨주는 것들.
@@ -147,12 +102,13 @@ class Map extends Component {
   };
 
 
+
   render() {
-    const {imageFile, x, y, 이름, count,} = this.state;
+    const {imageFile, x, y, clickName, count,} = this.state;
     const {trackMousePoint, findCulture, onClickCulture, onClickLeft, onClickRight} = this;
-    const {connection} = this.props;
+    const {connection,  onClickChange, onClickDessert} = this.props;
     const hoverName = findCulture(x, y);
-    // console.log('콘솔 함 찍어보입시드', 이름)
+    // console.log('콘솔 함 찍어보입시드', onClickDessert)
 
     return (
       <div>
@@ -187,12 +143,12 @@ class Map extends Component {
         </div>
         <div>
           {/*{findCulture(x, y)}*/}
-          <DessertSlide count={count} clickLeft={onClickLeft} clickRight={onClickRight} hoverName={hoverName}
-                        clickName={이름}/>
+          <DessertSlide onClickDessert={onClickDessert} count={count} clickLeft={onClickLeft} clickRight={onClickRight} hoverName={hoverName}
+                        clickName={clickName}/>
         </div>
         <div>
           {/*{comments.map((el) =>*/}
-          <CommentForm connection={connection} clickName={이름}/>
+          <CommentForm connection={connection} clickName={clickName}/>
 
         </div>
       </div>
