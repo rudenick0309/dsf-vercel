@@ -41,7 +41,7 @@ class CommentForm extends Component {
 
     if (previousProps.clickName !== clickName) {
       if (clickName) {
-        replyData = await axios.post("http://localhost:4000/comment/sorting",
+        replyData = await axios.post("http://13.125.58.125:4000/comment/sorting",
           {
             culture: clickName,
           });

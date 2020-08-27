@@ -1,35 +1,50 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import {Link, Redirect, withRouter, Router} from "react-router-dom";
 import axios from "axios";
 
-// const axios = require('./node_modules/axios');
 
+// const axios = require('./node_modules/axios');
 class Login extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      username: "",
-      password: "",
-    };
-
-    this.handleInputValue = this.handleInputValue.bind(this);
+    //수빈님, 여기서 email이랑 password ㅣ줭
+    // this.handleInputValue = this.handleInputValue.bind(this);
   }
+  // handleInputValue = (key) => (e) => {
+  //   this.setState({[key]: e.target.value});
+  // };
 
-  handleInputValue = (key) => (e) => {
-    this.setState({[key]: e.target.value});
-  };
-
+ 
 
   render() {
-    const {onSubmit} = this.props;
-
+    const {onSubmit, isLoggedIn, onChangeValue} = this.props;
+    console.log(isLoggedIn)
+    //const { email, password } = this.state;
+    
     return (
       <div>
         <center>
-
           <h1>Log In</h1>
+          
           <form onSubmit={onSubmit}>
+          {/* <form onSubmit={e => {
+          //     e.preventDefault();
+          //     // TODO : 서버에 로그인 요청 후 처리하세요.
+          //       return axios
+          //       .post("https://localhost:4000/user/signin", {
+          //         email: email,
+          //         password: password
+          //       })
+          //       .then(() => {
+          //         handleIsLoginChange()
+          //         this.props.history.push("/main")
+          //       })
+          //       .catch(err => console.log(err)
+          //       ) */}
+
+              
+            {/* // }} */}
+            
             <div>
               <input
                 style={{
@@ -40,7 +55,7 @@ class Login extends Component {
                 }}
                 type="email"
                 placeholder="EMAIL"
-                onChange={this.handleInputValue("username")}
+                onChange={onChangeValue("email")} //*
               ></input>
             </div>
             <div>
@@ -53,12 +68,10 @@ class Login extends Component {
                 }}
                 type="password"
                 placeholder="PASSWORD"
-                onChange={this.handleInputValue("username")}
+                onChange={onChangeValue("password")}
               ></input>
             </div>
-
-
-            {/*<Link to="/main">*/}
+            {/* <Link to="/main"> */}
             <button
               style={{
                 width: "200px",
@@ -71,8 +84,7 @@ class Login extends Component {
             >
               로그인
             </button>
-            {/*</Link>*/}
-
+            {/* </Link> */}
           </form>
         </center>
       </div>
@@ -80,5 +92,4 @@ class Login extends Component {
       ;
   }
 }
-
 export default Login;

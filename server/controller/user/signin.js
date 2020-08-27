@@ -17,7 +17,7 @@ module.exports = {
 
         if(await user) {
             req.session.userid = user.id
-            res.status(200).send(user)
+            res.status(201).send(user)
         } else {
             res.status(404).send('유효하지 않은 사용자입니다.')
         }
