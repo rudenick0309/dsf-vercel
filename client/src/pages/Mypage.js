@@ -2,19 +2,13 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {Welcomegreeting} from "../component/welcomegreeting"
 
-
-
-//const axios = require('axios'); 
-
 class Mypage extends Component {
   render(){
-    // console.log('마이페이지')
-
     return (
       <div>
         <center>
           <h1>마이페이지</h1>
-          <Welcomegreeting/> 
+          <Welcomegreeting/>
            <Link to= "/userinfo">
           <button
                 style={{

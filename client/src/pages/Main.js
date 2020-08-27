@@ -7,9 +7,7 @@ import WikiAPI from "../component/WikiAPI";
 import "../css/Main.css";
 import Mypage from "./Mypage";
 
-//const axios = require('axios');
-
-class Mainpage extends Component {                   //mypage가 여기서 연결이 된다.
+class Mainpage extends Component {
   state = {
     username: "",
     connection: false,
@@ -30,13 +28,8 @@ class Mainpage extends Component {                   //mypage가 여기서 연�
     return (
       <div className={"center"}>
         <center>
-          {/*<h1>메인 페이지</h1>*/}
           <HeaderComponent className={"header-bar"} isLoggedIn={isLoggedIn}/>
-          {/*isLoggedIn이 트루냐 폴스냐 그것이 문제로다*/}
-
-
           {isLoggedIn
-
             ? <>
               <Link to="/mypage">
                 <button
