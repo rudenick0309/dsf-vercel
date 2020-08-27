@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import testPic from "../image/Imageee.jpg";
 // import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
-import DessertSlide from "./DessertSlide";
+import DessertSlide from "../component/DessertSlide";
 import "../css/Map.css";
-import CommentForm from "./CommentForm";
+import CommentForm from "../component/CommentForm";
 import axios from "axios";
 
 class Map extends Component {

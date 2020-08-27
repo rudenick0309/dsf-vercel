@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e7d5aaa-7212-4e37-be8f-528a48881f3d" name="Default Changelist" comment="Update : maked css folder and added css files">
-      <change afterPath="$PROJECT_DIR$/client/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +49,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\pages" />
+      <recent name="C:\Users\ruden\coding\codestates\today-s-dessert\client\src\css" />
     </key>
   </component>
   <component name="SvnConfiguration">

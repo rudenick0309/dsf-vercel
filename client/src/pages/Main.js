@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link, Route} from "react-router-dom";
-import Map from "../component/Map";
+import Map from "./Map";
 import HeaderComponent from "../component/HeaderComponent";
 import ShoppingAPI from "../component/ShoppingAPI";
 import WikiAPI from "../component/WikiAPI";
