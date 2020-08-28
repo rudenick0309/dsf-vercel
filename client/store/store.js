@@ -1,29 +1,24 @@
-const { observable } = require('mobx');
+import {observable, action} from "mobx";
 
 const oneStore = observable({
   isOne : false,
   data : null,
-  oneFunction(data) {
-    this.isOne = true;
+  oneFunction: action((data) => {
+    oneStore.isOne = true;
     setTimeout(() => {
-      this.data = data;
-      this.isOne = false;
-      twoStore.data.unshift(data)
+      oneStore.data = data;
+      oneStore.isOne = false;
+      twoStore.twoFunction(data)
     }, 3000)
-  },
+  }),
 })
 
 
 const twoStore = observable({
-
   data : [],
-  twoFunction() {
-    this.data.push(data);
-    // setTimeout(() => {
-    //   this.data = data;
-
-    // }, 3000)
-  }
+  twoFunction: action((data) => {
+    twoStore.data.unshift(data);
+  })
 })
 
 export { oneStore, twoStore };
