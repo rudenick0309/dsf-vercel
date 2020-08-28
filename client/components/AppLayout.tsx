@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {Menu,Input, Row, Col} from 'antd';
 import Link from 'next/link'
 import styled from 'styled-components';
