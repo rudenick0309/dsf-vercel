@@ -1,5 +1,5 @@
-import React from 'react';
-// import imagePic from '../image/images.jpg'
+import * as React from 'react';
+// import imagePic from '../image/Image.jpg'
 
 const Map = () => {
   return (

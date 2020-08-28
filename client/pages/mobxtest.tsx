@@ -1,22 +1,28 @@
-import React from "react";
+import * as React from "react";
 import {useCallback, useEffect} from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import {useObserver, useLocalStore} from "mobx-react";
-import {oneStore, twoStore} from "../store/store";
-import {toJS} from "mobx";
 
+import { action } from 'mobx';
+import {oneStore, twoStore} from "../store/store";
+
+interface LocalState {
+  state: string,
+  onChangeState : (e:React.ChangeEvent<HTMLInputElement>) => void,
+}
 
 const mobxtest = () => {
   console.log('In comp, mobxtest, twoStore.data : ', Array.isArray(twoStore.data));
   console.log('In comp, mobxtest, twoStore.data : ', twoStore.data);
   twoStore.data.forEach(el => console.log('여기',el))
 
-  const state = useLocalStore(() => ({
+
+  const state = useLocalStore<LocalState>(() => ({
     state: "",
-    onChangeState(e) {
+    onChangeState: action(function(this : LocalState, e: React.ChangeEvent<HTMLInputElement>)  {
       this.state = e.target.value;
-    },
+    }),
   }));
 
   const onClick = useCallback(() => {
