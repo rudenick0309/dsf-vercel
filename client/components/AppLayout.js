@@ -20,6 +20,7 @@ const AppLayout = ({children}) => {
   return (
     <>
       <DivStd>
+
         <MenuStd mode='horizontal'>
 
           <MenuStdChildren.Item>
@@ -34,7 +35,12 @@ const AppLayout = ({children}) => {
             <Link href='/signup'><a>sign up</a></Link>
           </MenuStdChildren.Item>
 
+          <MenuStdChildren.Item>
+            <Link href='/mobxtest'><a>mobxtest</a></Link>
+          </MenuStdChildren.Item>
+
         </MenuStd>
+
       </DivStd>
 
 
