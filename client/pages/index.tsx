@@ -1,15 +1,15 @@
-import React from "react";
+import * as React from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 
-const signup = () => {
+const Home = () => {
   return (
     <>
       <Head>
-        <title>signup | DessertFinder</title>
+        <title>DessertFinder</title>
       </Head>
       <AppLayout>
-        <div>signup 테스트</div>
+        <div>Home 테스트</div>
       </AppLayout>
 
     </>
@@ -17,4 +17,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Home;

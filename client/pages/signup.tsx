@@ -1,15 +1,15 @@
-import React from "react";
+import * as React from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 
-const signin = () => {
+const signup = () => {
   return (
     <>
       <Head>
-        <title>signin | DessertFinder</title>
+        <title>signup | DessertFinder</title>
       </Head>
       <AppLayout>
-        <div>signin 테스트</div>
+        <div>signup 테스트</div>
       </AppLayout>
 
     </>
@@ -17,4 +17,4 @@ const signin = () => {
   );
 };
 
-export default signin;
+export default signup;
