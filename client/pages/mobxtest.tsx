@@ -4,58 +4,53 @@ import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import {useObserver, useLocalStore} from "mobx-react";
 
-import { action } from 'mobx';
+import {action} from 'mobx';
 import {oneStore, twoStore} from "../store/store";
 
 interface LocalState {
-  state: string,
-  onChangeState : (e:React.ChangeEvent<HTMLInputElement>) => void,
+    state: string,
+    onChangeState: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
 const mobxtest = () => {
-  console.log('In comp, mobxtest, twoStore.data : ', Array.isArray(twoStore.data));
-  console.log('In comp, mobxtest, twoStore.data : ', twoStore.data);
-  twoStore.data.forEach(el => console.log('여기',el))
+    const state = useLocalStore<LocalState>(() => ({
+        state: "",
+        onChangeState: action(function (this: LocalState, e: React.ChangeEvent<HTMLInputElement>) {
+            this.state = e.target.value;
+        }),
+    }));
 
+    const onClick = useCallback(() => {
+        oneStore.oneFunction(state.state);
+    }, [state.state]);
 
-  const state = useLocalStore<LocalState>(() => ({
-    state: "",
-    onChangeState: action(function(this : LocalState, e: React.ChangeEvent<HTMLInputElement>)  {
-      this.state = e.target.value;
-    }),
-  }));
+    return useObserver(() => (
+        <>
+            <Head>
+                <title>mobxtest | DessertFinder</title>
+            </Head>
 
-  const onClick = useCallback(() => {
-    oneStore.oneFunction(state.state);
-  }, [state.state]);
+            <AppLayout>
 
-  return useObserver(() => (
-    <>
-      <Head>
-        <title>mobxtest | DessertFinder</title>
-      </Head>
+                <input value={state.state} onChange={state.onChangeState}/>
+                <button onClick={onClick}>
+                    TRIGGER
+                </button>
+                {oneStore.data
+                    ?
+                    (
+                        <>
+                            <div>{oneStore.data}가 있네요</div>
+                            <div>{twoStore.data.length}가 있네요</div>
 
-      <AppLayout>
+                        </>
+                    )
+                    : (<div>data가 없어요</div>)
+                }
+            </AppLayout>
 
-        <input value={state.state} onChange={state.onChangeState}/>
-        <button onClick={onClick}>
-          TRIGGER
-        </button>
-        {oneStore.data
-          ?
-          (
-            <>
-              <div>{oneStore.data}가 있네요</div>
-              <div>{twoStore.data.length}가 있네요</div>
-
-            </>
-          )
-          : (<div>data가 없어요</div>)
-        }
-      </AppLayout>
-
-    </>
-  ));
+        </>
+    ));
 };
 
 export default mobxtest;
