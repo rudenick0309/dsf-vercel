@@ -3,9 +3,9 @@ import {useCallback, useEffect} from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import {useObserver, useLocalStore} from "mobx-react";
+
 import { action } from 'mobx';
 import {oneStore, twoStore} from "../store/store";
-
 
 interface LocalState {
   state: string,
@@ -16,6 +16,7 @@ const mobxtest = () => {
   console.log('In comp, mobxtest, twoStore.data : ', Array.isArray(twoStore.data));
   console.log('In comp, mobxtest, twoStore.data : ', twoStore.data);
   twoStore.data.forEach(el => console.log('여기',el))
+
 
   const state = useLocalStore<LocalState>(() => ({
     state: "",

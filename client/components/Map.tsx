@@ -5,7 +5,6 @@ const Map = () => {
   return (
     <>
       <div>Map 테스트</div>
-
     </>
   )
 }
