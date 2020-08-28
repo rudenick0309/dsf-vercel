@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "antd": "4.6.1",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
     "axios": "0.20.0",
     "faker": "5.1.0",
     "immer": "7.0.8",
@@ -21,5 +23,15 @@
     "react-dom": "16.13.1",
     "shortid": "2.2.15",
     "styled-components": "5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "react-hot-loader": "^4.12.15",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
