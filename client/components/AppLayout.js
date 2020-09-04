@@ -14,7 +14,6 @@ const MenuStd = styled(Menu)`
 `
 
 const MenuStdChildren = styled(Menu)`
-  
   justify-content: flex-end;
 `
 
@@ -48,9 +47,9 @@ const AppLayout = ({children}) => {
 
       <Row gutter={8}>
 
-        <Col xs={24} md={2}></Col>
+        <Col xs={24} md={2} />
         <Col xs={24} md={16}>{children}</Col>
-        <Col xs={24} md={6}></Col>
+        <Col xs={24} md={6} />
 
       </Row>
 
