@@ -4,19 +4,15 @@ import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import {useForm} from 'react-hook-form'
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-}
 
 const signup = () => {
-  const {register, setValue, handleSubmit, errors} = useForm<FormData>();
+  const {register, setValue, handleSubmit, errors} = useForm();
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit(() => {
     console.log('In signup, onSubmit, data : ', data)
-    if (data.password !== data.passwordCheck) {
-      return alert('diff')
-    }
+    // if (data.password !== data.passwordCheck) {
+    //   return alert('diff')
+    // }
   }); // firstName and lastName will have correct type
 
   const validatePassword = (value) => {
@@ -56,40 +52,3 @@ const signup = () => {
 
 export default signup;
 
-
-// interface OnSubmit {
-//     email: string,
-//     password: string,
-//     passwordCheck: string,
-// }
-//
-// const signup = () => {
-//     const {register, handleSubmit} = useForm();
-//     const onSubmit = (data: any) => console.log('In comp, signup, onSubmit, data : ', data);
-//
-//     return (
-//         <div>
-//             <Head>
-//                 <title>signup | DessertFinder</title>
-//             </Head>
-//             <AppLayout>
-//
-//                 {/*  email, password, password check, gender?, address?,  */}
-//                 <div>
-//                     <form onSubmit={handleSubmit(onSubmit)}>
-//
-//                         <input name={'email'} ref={register({required: true,pattern:10})}/>
-//                         <input name={'password'} type={'password'} ref={register}/>
-//                         <input name={'passwordCheck'} type={'password'} ref={register}/>
-//                         <input type={'submit'}/>
-//
-//                     </form>
-//                 </div>
-//                 {/*    */}
-//
-//             </AppLayout>
-//
-//         </div>
-//
-//     );
-// };
