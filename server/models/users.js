@@ -28,5 +28,5 @@ module.exports = (sequelize, DataTypes) => {
     return users;
 };
 
-//models/users 그리고 index.js, dessert, comments 있었음
+//models/users 그리고 indedx.js, dessert, comments 있었음
 // timestamps를 true로 주게 되면 createdAt과 updatedAt 컬럼을 추가
