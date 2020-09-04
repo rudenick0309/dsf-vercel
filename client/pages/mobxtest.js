@@ -7,15 +7,11 @@ import {useObserver, useLocalStore} from "mobx-react";
 import {action} from 'mobx';
 import {oneStore, twoStore} from "../store/store";
 
-interface LocalState {
-    state: string,
-    onChangeState: (e: React.ChangeEvent<HTMLInputElement>) => void,
-}
 
 const mobxtest = () => {
-    const state = useLocalStore<LocalState>(() => ({
+    const state = useLocalStore(() => ({
         state: "",
-        onChangeState: action(function (this: LocalState, e: React.ChangeEvent<HTMLInputElement>) {
+        onChangeState: action(function () {
             this.state = e.target.value;
         }),
     }));
