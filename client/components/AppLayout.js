@@ -4,6 +4,7 @@ import React from 'react';
 import {Menu,Input, Row, Col} from 'antd';
 import Link from 'next/link'
 import styled from 'styled-components';
+import Map from "./Map";
 
 const DivStd = styled.div`
   display: flex;
@@ -36,10 +37,6 @@ const AppLayout = ({children}) => {
             <Link href='/signup'><a>sign up</a></Link>
           </MenuStdChildren.Item>
 
-          <MenuStdChildren.Item>
-            <Link href='/mobxtest'><a>mobxtest</a></Link>
-          </MenuStdChildren.Item>
-
         </MenuStd>
 
       </DivStd>
@@ -48,8 +45,8 @@ const AppLayout = ({children}) => {
       <Row gutter={8}>
 
         <Col xs={24} md={2} />
-        <Col xs={24} md={16}>{children}</Col>
-        <Col xs={24} md={6} />
+        <Col xs={24} md={16}><Map/></Col>
+        <Col xs={24} md={6}>{children}</Col>
 
       </Row>
 
