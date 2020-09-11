@@ -13,8 +13,7 @@ const Home = () => {
         <title>DessertFinder</title>
       </Head>
       <AppLayout>
-        <div>Home test</div>
-        <div style={{width:'600px', height:'600px'}}><image src={img} style={{width:'100px', height:'100px'}} /></div>
+
       </AppLayout>
 
     </>
