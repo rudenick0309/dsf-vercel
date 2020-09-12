@@ -1,14 +1,11 @@
 require('dotenv').config();
 
-let dessertPW = process.env.DESSERT_PASSWORD
-
 module.exports = {
     "development": {
-        username: "admin",
-        password: dessertPW,
+        username: "root",
+        password: process.env.DESSERT_PASSWORD,
         database: "dessert",
-        port: 13306,
-        host :"dessertdb.cnbhvz2bmwob.ap-northeast-2.rds.amazonaws.com",
+        host :"127.0.0.1",
         dialect : "mysql"
     }
 }
