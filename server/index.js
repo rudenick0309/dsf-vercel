@@ -15,6 +15,7 @@ const morgan = require('morgan')
 const userRouter = require('./routes/user')
 const dessertRouter = require('./routes/dessert')
 const commentRouter = require('./routes/comment')
+const searchRouter = require('./routes/search')
 
 const app = express()
 // const port = 4000;
@@ -45,5 +46,8 @@ app.get('/', (req,res) => {
 app.use('/user', userRouter)
 app.use('/dessert', dessertRouter)
 app.use('/comment', commentRouter)
+app.use('/search', searchRouter)
 
-app.listen(4000)
+app.listen(4000,() => {
+    console.log('데이터베이스 연결 성공');
+})
