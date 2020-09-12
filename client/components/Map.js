@@ -12,8 +12,8 @@ const Map = () => {
 
   return (
     <>
-      <div  >
-        <img src={img} useMap={"#Map"}  />
+      <div >
+        <img src={img} useMap={"#Map"}  style={{border:'3px solid yellow'}}/>
         <map name={"Map"} id={"Map"}>
           <area name={"오세"} alt={"오세"} shape={"rect"} coords={"500,460,670,580"} onClick={onClickCulture("오세아니아")}
                 tabIndex={"1"}/>
