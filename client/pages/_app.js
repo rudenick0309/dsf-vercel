@@ -17,3 +17,5 @@ const DessertFinder = ({Component}) => {
 };
 
 export default DessertFinder;
+
+// 1320 * 820
