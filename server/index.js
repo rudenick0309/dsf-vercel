@@ -26,8 +26,8 @@ sequelize.sync()
 //use middleware
 app.use(bodyparser.json());
 app.use(cors({
-    origin: ['http://13.125.58.125:3000'],
-    method: ['GET', 'POST'],
+    origin: ['http://localhost:3000'],
+    // method: ['GET', 'POST'],
     credentials: true
 }))
 app.use(morgan('dev'))

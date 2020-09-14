@@ -6,20 +6,8 @@ const client_id = process.env.NAVER_ID
 const client_secret = process.env.NAVER_PD
 
 router.get('/blog.json',(req,res,next) => {
-// router.get('/shop.json',(req,res,next) => {
-//router.get('/cafearticle.json',(req,res,next) => {
-// router.get('/webkr.json',(req,res,next) => {
-// router.get('/local.json',(req,res,next) => {
-  console.log('b search get blog req', req.query.data);
-  const word = req.query.data + ' ' +'디저트'
-  const keyword = `${encodeURI(word)}`
-
-  // const api_url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURI(keyword)}`
-  //const api_url = `https://openapi.naver.com/v1/search/cafearticle.json?query=${encodeURI(keyword)}`
-   const api_url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURI(keyword)}`
-  //const api_url = `https://openapi.naver.com/v1/search/image?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/webkr?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/local?query=${encodeURI(keyword)}`
+  const word = req.query.data + '디저트'
+  const api_url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURI(word)}&sort=sim`
 
   const request = require('request');
   const options = {
@@ -39,20 +27,9 @@ router.get('/blog.json',(req,res,next) => {
 
 })
 
-// router.get('/webkr.json',(req,res,next) => {
-// router.get('/shop.json',(req,res,next) => {
 router.get('/image',(req,res,next) => {
-
-  console.log('b search get shopping req', req.query.data);
-  const word = req.query.data + ' ' +'디저트'
-  const keyword = `${encodeURI(word)}`
-
-  // const api_url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/cafearticle.json?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURI(keyword)}`
-  const api_url = `https://openapi.naver.com/v1/search/image?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/webkr?query=${encodeURI(keyword)}`
-  // const api_url = `https://openapi.naver.com/v1/search/local?query=${encodeURI(keyword)}`
+  const word = req.query.data + '디저트'
+  const api_url = `https://openapi.naver.com/v1/search/image?query=${encodeURI(word)}&sort=sim`
 
   const request = require('request');
   const options = {
