@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
+
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
-import {img} from '../image/images.jpg'
+
+import Map from "../components/Map";
 
 
-// const iImaage
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <title>DessertFinder</title>
       </Head>
       <AppLayout>
-
+        <Map/>
       </AppLayout>
 
     </>
