@@ -26,7 +26,8 @@ sequelize.sync()
 //use middleware
 app.use(bodyparser.json());
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    // origin: ['http://localhost:3000'],
+    origin: ['https://dessert-finder.vercel.app'],
     // method: ['GET', 'POST'],
     credentials: true
 }))
