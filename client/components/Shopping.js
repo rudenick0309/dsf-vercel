@@ -3,22 +3,22 @@ import {map} from "../store/map";
 import {toJS} from "mobx";
 import {useObserver} from "mobx-react";
 import ShoppingList from "./ShoppingList";
-import styled from 'styled-components'
 
 
 const Shopping = () => {
-  console.log("f comment, map.dataTwo", map.dataTwo);
-  // const mapData = toJS(map.dataTwo)?.filter((el) => el.title[0] !== "%")
 
   return useObserver(() => (
     <>
-      <div style={styles.div}>
+      <div>{toJS(map.dataTwo)?.filter((el) => el.title[0] !== "%").length} 개의 블로그 검색 결과입니다</div>
+      {toJS(map.dataTwo)?.filter((el) => el.title[0] !== "%").length === 0 ?
+        (<div> 결과가 존재하지 않습니다 </div>)
+      :(<div style={styles.div}>
+          {toJS(map.dataTwo)?.filter((el) => el.title[0] !== "%").map((el) => {
+            return <ShoppingList data={el}/>;
+          })}
+        </div>)
+      }
 
-        {toJS(map.dataTwo)?.filter((el) => el.title[0] !== "%").map((el) => {
-          return <ShoppingList data={el}/>;
-        })}
-
-      </div>
     </>
   ));
 };
@@ -27,7 +27,6 @@ export default Shopping;
 
 const styles = {
   div: {
-    border:'3px solid yellow',
     height:'200px',
     overflow:'auto',
     display: 'flex',
