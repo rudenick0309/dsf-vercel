@@ -40,16 +40,19 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "vercel-deploy": "next build && next export"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rudenick0309/today-s-dessert.git"
+    "url": "git+https://github.com/rudenick0309/dessert-finder"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rudenick0309/today-s-dessert/issues"
+    "url": "https://github.com/rudenick0309/dessert-finder/issues"
   },
-  "homepage": "https://github.com/rudenick0309/today-s-dessert#readme"
+  "homepage": "https://github.com/rudenick0309/dessert-finder#readme"
 }
