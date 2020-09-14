@@ -62,7 +62,6 @@ const MAP = {
 
 
 const Map = () => {
-console.log('아왜...')
   const onClick = useCallback((e) => {
     map.cultureNameU(e.name)
   },[]);
