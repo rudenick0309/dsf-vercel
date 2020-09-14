@@ -28,7 +28,7 @@ app.use(bodyparser.json());
 app.use(cors({
     // origin: ['http://localhost:3000'],
     // origin: ['https://dessert-finder.vercel.app'],
-    origin: ['https://dessert-finder-git-master.rudenick0309.vercel.app/'],
+    origin: ['https://dessert-finder-git-master.rudenick0309.vercel.app'],
     // method: ['GET', 'POST'],
     credentials: true
 }))
