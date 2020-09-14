@@ -1,0 +1,23 @@
+{
+  "name": "today-s-dessert",
+  "version": "1.0.0",
+  "description": "세계의 생소한 디저트를 소비자에게 소개 ・ 추천 ・ 구매처 제공을 해주는 서비스입니다.\r ***",
+  "main": "estimated_time.js",
+  "dependencies": {
+    "react-image-mapper": "0.0.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudenick0309/today-s-dessert.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudenick0309/today-s-dessert/issues"
+  },
+  "homepage": "https://github.com/rudenick0309/today-s-dessert#readme"
+}
