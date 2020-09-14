@@ -1,77 +1,49 @@
 import React from "react";
-
 import {Menu, Input, Row, Col} from "antd";
 import Link from "next/link";
 import styled from "styled-components";
 import Map from "./Map";
 import Shopping from "./Shopping";
 import Blog from "./Blog";
-import {Layout} from "antd";
-
-const {Header, Footer, Sider, Content} = Layout;
-
 
 const DivStd = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
 
-const MenuStd = styled(Menu)`
-`;
-
 const MenuStdChildren = styled(Menu)`
   justify-content: flex-end;
 `;
 
-const DivStyled = styled.div`
-  border:3px solid pink;
-`
 const DivRowStyled = styled(Row)`
-  border:3px solid black;
   display: flex;
-  
 `
 
+const DivMediaStyle = styled.div`
+  position: absolute;
+  z-index:99;
+  height: 100vh;
+  width: 100vw;
+  background-color:grey;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:40px;
+  top:0;
+  @media screen and (min-width: 1600px) {
+    display:none;
+  }
+`
 
 const AppLayout = ({children}) => {
 
   return (
     <>
-      {/*<Layout>*/}
-      {/*  <Header>*/}
-      {/*    <DivStd>*/}
-
-      {/*      <MenuStd mode='horizontal'>*/}
-
-      {/*        <MenuStdChildren.Item>*/}
-      {/*          <Link href='/'><a>Home</a></Link>*/}
-      {/*        </MenuStdChildren.Item>*/}
-
-      {/*        <MenuStdChildren.Item>*/}
-      {/*          <Link href='/signin'><a>sign in</a></Link>*/}
-      {/*        </MenuStdChildren.Item>*/}
-
-      {/*        <MenuStdChildren.Item>*/}
-      {/*          <Link href='/signup'><a>sign up</a></Link>*/}
-      {/*        </MenuStdChildren.Item>*/}
-
-      {/*      </MenuStd>*/}
-
-      {/*    </DivStd>*/}
-      {/*  </Header>*/}
-
-      {/*  <Layout>*/}
-      {/*    <Sider></Sider>*/}
-      {/*    <Content style={styles.container}>{children}</Content>*/}
-      {/*    <Sider style={styles.rightSider}><Blog/></Sider>*/}
-      {/*  </Layout>*/}
-      {/*  <Footer><Shopping/></Footer>*/}
-      {/*</Layout>*/}
-
+      {/*<DivMediaStyle>현재 페이지</DivMediaStyle>*/}
       {/*=======================================================================*/}
       <DivStd>
 
-        <MenuStd mode='horizontal'>
+        <Menu mode='horizontal'>
 
           <MenuStdChildren.Item>
             <Link href='/'><a>Home</a></Link>
@@ -85,17 +57,17 @@ const AppLayout = ({children}) => {
             <Link href='/signup'><a>sign up</a></Link>
           </MenuStdChildren.Item>
 
-        </MenuStd>
+        </Menu>
 
       </DivStd>
 
-      <DivStyled>
+      <div>
         <DivRowStyled gutter={4}>
           <Col xs={24} md={2} />
           <Col xs={24} md={14}><Map/></Col>
           <Col xs={24} md={6} ><Blog/></Col>
         </DivRowStyled>
-      </DivStyled>
+      </div>
 
       <div>
         <Row gutter={4}>
