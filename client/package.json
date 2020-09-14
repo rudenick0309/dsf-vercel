@@ -23,6 +23,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "6.7.1",
+    "react-html-parser": "2.0.2",
     "react-image-mapper": "0.0.15",
     "shortid": "2.2.15",
     "styled-components": "5.1.1"
